@@ -24,3 +24,33 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes goldSweep {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.gold-sweep {
+  animation: goldSweep 8s ease-in-out infinite;
+}
+
+
+@keyframes gridMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 70px 70px;
+  }
+}
+
+.animate-grid {
+  animation: gridMove 40s linear infinite;
+}
