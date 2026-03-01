@@ -635,7 +635,7 @@ Explore structured strategies and educational resources to strengthen your tradi
                   : 
                 billing === "6monthly" ?
              
-                  "Save $559,85 yearly"
+                  "Save $599,85 yearly"
                : 
                 billing === "yearly" ?
                
