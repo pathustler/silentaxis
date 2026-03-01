@@ -126,6 +126,7 @@ export default function Home() {
 
             <div className="hidden md:flex gap-10 text-sm tracking-widest uppercase">
               <a href="#features" onClick={e => handleAnchor(e, "#features")} className="cursor-pointer text-gray-400 hover:text-gray-200 transition text-sm">Features</a>
+              <a href="#team" onClick={e => handleAnchor(e, "#team")} className="cursor-pointer text-gray-400 hover:text-gray-200 transition text-sm">Team</a>
               <a href="#pricing" onClick={e => handleAnchor(e, "#pricing")} className="cursor-pointer text-gray-400 hover:text-gray-200 transition">Pricing</a>
               <a href="#faq" onClick={e => handleAnchor(e, "#faq")} className="cursor-pointer text-gray-400 hover:text-gray-200 transition">FAQ</a>
             </div>
