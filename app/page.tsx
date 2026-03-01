@@ -506,95 +506,147 @@ Explore structured strategies and educational resources to strengthen your tradi
   </div>
 </section>
 
+{/* ========================= */}
+{/* PRICING */}
+{/* ========================= */}
+<section id="pricing" className="relative py-32 px-6 overflow-hidden">
 
-        {/* ========================= */}
-        {/* PRICING */}
-        {/* ========================= */}
-        <section id="pricing" className="py-32 px-6 text-center">
-          <div ref={pricingRef} className="reveal">
-            <h2 className="text-4xl font-bold mb-12">
-              Join Silent Axis
-            </h2>
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 -z-10 bg-cover bg-center"
+    style={{
+      backgroundImage: "url('/images/mountain-bg.jpg')",
+    }}
+  />
+  <div className="absolute inset-0 -z-10 bg-black/85" />
 
-            <div className="max-w-xl mx-auto border border-white/10 rounded-3xl p-10 bg-white/5 backdrop-blur">
+  <div className="max-w-6xl mx-auto text-center mb-16">
+    <h2 className="text-4xl md:text-5xl font-bold tracking-widest">
+      JOIN SILENT AXIS
+    </h2>
+  </div>
 
-              <div className="flex justify-center mb-10  rounded-full p-1">
-              
-                <button
-                  onClick={() => setBilling("weekly")}
-                  className="px-6 py-2 rounded-full  cursor-pointer transition"
-                  style={
-                    billing === "weekly"
-                      ? { background: goldGradient, color: "black" }
-                      : { color: "rgba(255,255,255,0.6)" }
-                  }
-                >
-                  1 Week
-                </button>
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
 
-                <button
-                  onClick={() => setBilling("monthly")}
-                  className="px-6 py-2 rounded-full  cursor-pointer transition"
-                  style={
-                    billing === "monthly"
-                      ? { background: goldGradient, color: "black" }
-                      : { color: "rgba(255,255,255,0.6)" }
-                  }
-                >
-                  1 Month
-                </button>
+    {/* FREE TELEGRAM CARD */}
+    <div className="rounded-2xl p-[2px]" style={{ background: goldGradient }}>
+      <div className="bg-black rounded-2xl p-10 h-full flex flex-col justify-between">
 
-                <button
-                  onClick={() => setBilling("6monthly")}
-                  className="px-6 py-2 rounded-full cursor-pointer transition"
-                  style={
-                    billing === "6monthly"
-                      ? { background: goldGradient, color: "black" }
-                      : { color: "rgba(255,255,255,0.6)" }
-                  }
-                >
-                  6 Months
-                </button>
-                <button
-                  onClick={() => setBilling("yearly")}
-                  className="px-6 py-2 rounded-full cursor-pointer transition"
-                  style={
-                    billing === "yearly"
-                      ? { background: goldGradient, color: "black" }
-                      : { color: "rgba(255,255,255,0.6)" }
-                  }
-                >
-                  1 Year
-                </button>
-              </div>
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Free Telegram</h3>
+          <p className="text-white/60 text-sm mb-10">
+            Get daily macro updates, weekly education, and join live sessions on Discord at no cost.
+          </p>
 
-              <h3 className="text-5xl font-bold mb-6">
-                {price}
-                <span className="text-lg text-white/60">
-                  {" "}
-                  / {billing === "weekly" ? "week" : billing === "monthly" ? "month" : billing === "6monthly" ? "6 months" : "year"}
-                </span>
-              </h3>
+          <h4 className="text-4xl font-bold mb-10">$0.00</h4>
 
-              <ul className="text-left space-y-4 mb-10 text-white/70">
-                <li>✔ Full Community Access</li>
-                <li>✔ Real-Time Execution Alerts</li>
-                <li>✔ Daily Market Breakdown</li>
-                <li>✔ Risk Strategy Framework</li>
-              </ul>
-              {/* new tab */}
-                <Link target="__blank" href={billing==="weekly"? "https://subscord.com/store/1474291338802626570/checkout/_I07_IeE-MTMxMw": billing === "yearly" ? "https://subscord.com/store/1474291338802626570/checkout/8f9B5nK--MTMxMg" : billing === "6monthly" ? "https://subscord.com/store/1474291338802626570/checkout/CObwDgo_-MTMxMQ" : "https://subscord.com/store/1474291338802626570/checkout/Z7teUQOl-MTI5Mg"} className="w-full">
+          <ul className="text-white/70 space-y-3 mb-12 text-left">
+            <li>• Daily macro market updates</li>
+            <li>• Weekly educational content</li>
+            <li>• Weekly live Discord sessions</li>
+          </ul>
+        </div>
+
+        <Link target="__blank" href="https://t.me/silentaxis0">
+          <button
+            className="w-full py-4 rounded-full cursor-pointer font-semibold text-black transition"
+            style={{ background: goldGradient }}
+          >
+            Join Telegram
+          </button>
+        </Link>
+
+      </div>
+    </div>
+
+
+    {/* PREMIUM CARD */}
+    <div className="rounded-2xl p-[2px]" style={{ background: goldGradient }}>
+      <div className="bg-black rounded-2xl p-10 h-full flex flex-col justify-between">
+
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Premium Discord</h3>
+          <p className="text-white/60 text-sm mb-8">
+            Unlock full analyst access, daily set-ups, portfolio tools, and in-depth market analysis.
+          </p>
+
+          {/* SEGMENTED TOGGLE */}
+          <div className="flex mb-10 border rounded-full overflow-hidden w-fit mx-auto "
+               style={{ borderColor: "#ff914d" }}>
+            
+            {[
+              { key: "weekly", label: "1 Week" },
+              { key: "monthly", label: "1 Month" },
+              { key: "6monthly", label: "6 Months" },
+              { key: "yearly", label: "1 Year" },
+            ].map((plan) => (
               <button
-                className="w-full py-4 rounded-full font-semibold text-black transition cursor-pointer"
-
-                style={{ background: goldGradient }}
+                key={plan.key}
+                onClick={() => setBilling(plan.key as any)}
+                className="px-6 py-2 transition font-medium cursor-pointer"
+                style={
+                  billing === plan.key
+                    ? { background: goldGradient, color: "black" }
+                    : { color: "white" }
+                }
               >
-                Get Started
+                {plan.label}
               </button>
-              </Link>
-            </div>
+            ))}
+
           </div>
-        </section>
+
+          {/* PRICE */}
+          <h4 className="text-4xl font-bold mb-4">
+            {price}
+            <span className="text-lg text-white/60 ml-2">
+              /{" "}
+              {billing === "weekly"
+                ? "week"
+                : billing === "monthly"
+                ? "month"
+                : billing === "6monthly"
+                ? "6 months"
+                : "year"}
+            </span>
+          </h4>
+
+          <ul className="text-white/70 mb-6 text-left">
+            <li>• Direct analysts access</li>
+            <li>• Premium Live Sessions</li>
+            <li>• Daily trade set-ups</li>
+            <li>• Portfolio allocation tools</li>
+            <li>• Educational contents</li>
+            <li>• Crypto, stocks, metals, indices analysis</li>
+            <li>• Hyperliquid Vault access</li>
+          </ul>
+        </div>
+
+        <Link
+          target="__blank"
+          href={
+            billing === "weekly"
+              ? "https://subscord.com/store/1474291338802626570/checkout/_I07_IeE-MTMxMw"
+              : billing === "yearly"
+              ? "https://subscord.com/store/1474291338802626570/checkout/8f9B5nK--MTMxMg"
+              : billing === "6monthly"
+              ? "https://subscord.com/store/1474291338802626570/checkout/CObwDgo_-MTMxMQ"
+              : "https://subscord.com/store/1474291338802626570/checkout/Z7teUQOl-MTI5Mg"
+          }
+        >
+          <button
+            className="w-full py-4 rounded-full cursor-pointer font-semibold text-black transition"
+            style={{ background: goldGradient }}
+          >
+            Get Premium
+          </button>
+        </Link>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
         {/* ========================= */}
         {/* FAQ */}
