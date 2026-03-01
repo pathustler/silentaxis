@@ -348,7 +348,7 @@ Explore structured strategies and educational resources to strengthen your tradi
                   Join the Community
                 </h3>
                 <p className="text-white/50 leading-relaxed">
-                  Subscribe and get instant access to our private Telegram group
+                 Get access to the Silent Axis private Discord, where traders and analysts share macro views, market structure, and high-quality market discussions.
                 </p>
               </div>
 
@@ -365,10 +365,10 @@ Explore structured strategies and educational resources to strengthen your tradi
                   2
                 </div>
                 <h3 className="text-xl font-semibold">
-                  Study and Compare 
+                  Study the Process
                 </h3>
                 <p className="text-white/50 leading-relaxed">
-                  Study and compare market structure breakdowns, and trading frameworks
+                  Break down our analyses, align them with your edge, and sharpen your decision-making. Learn how to read context, manage risk, and stay consistent.
                 </p>
               </div>
 
@@ -388,7 +388,7 @@ Explore structured strategies and educational resources to strengthen your tradi
                   Execute &amp; Profit
                 </h3>
                 <p className="text-white/50 leading-relaxed">
-                  Follow the calls on your preferred exchange and grow your portfolio
+                  Put your skills into action with discipline and clarity. Trade smarter, grow your capital, and compound results over time.
                 </p>
               </div>
 
