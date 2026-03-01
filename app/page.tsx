@@ -440,7 +440,7 @@ Explore structured strategies and educational resources to strengthen your tradi
         title: "Analyst and Community Manager",
         handle: "@kazymun",
         x:"https://x.com/kazymun",
-        bio: "A disciplined trader with 2.5 years of active experience and a longer background in crypto. Trades majors only — BTC, ETH, and SOL — with a focus on liquidity, structure, and clean execution. Uses liquidation heatmaps to identify dense liquidity zones and potential reversals, emphasizing risk management and consistency.",
+        bio: "A Swing Trader with 2.5 years of active experience and a longer background in crypto. Trades majors only — BTC, ETH, and SOL — with a focus on liquidity, structure, and clean execution. Uses liquidation heatmaps to identify dense liquidity zones and potential reversals, emphasizing risk management and consistency.",
       },
     ].map((member, i) => (
       <div
@@ -675,7 +675,7 @@ Explore structured strategies and educational resources to strengthen your tradi
               },
                {
                 q: "What are the payment options?",
-                a: "Crypto only. Select from monthly, six-month, or annual plans. All options include full access to our Discord and exclusive resources.",
+                a: "Crypto only. Select from weekly, monthly, six-month, or annual plans. All options include full access to our Discord and exclusive resources.",
               },
                {
                 q: "Can I cancel anytime?",
