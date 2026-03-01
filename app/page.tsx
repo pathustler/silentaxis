@@ -604,7 +604,7 @@ Explore structured strategies and educational resources to strengthen your tradi
           </div>
 
           {/* PRICE */}
-          <h4 className="text-3xl sm:text-4xl font-bold mb-4 text-center sm:text-left">
+          <h4 className="text-3xl sm:text-4xl font-bold mb-4 text-center flex items-center sm:text-left">
             {price}
             <span className="text-base sm:text-lg text-white/60 ml-2">
               /{" "}
@@ -617,17 +617,30 @@ Explore structured strategies and educational resources to strengthen your tradi
                 : "year"}
             </span>
 
-            {billing === "monthly" &&(
-            <button
-  className="inline-flex ml-4  items-center px-3 py-1.5 rounded-full text-xs font-semibold transition cursor-pointer"
-  style={{
-    background: goldGradient,
-    color: "black",
-  }}
->
-  Save $20 by opting 6 Months
-</button>)
-}
+            {billing === "monthly" ?(
+              <button
+                  className="inline-flex ml-4  items-center px-3 py-1.5 rounded-full text-xs font-semibold transition cursor-pointer"
+                  style={{
+                    background: goldGradient,
+                    color: "black",
+                  }}
+                >
+                  Save $20 by opting 6 Months
+                </button>)
+
+                  : 
+                billing === "6monthly" ?(
+                  <button
+                  className="inline-flex ml-4  items-center px-3 py-1.5 rounded-full text-xs font-semibold transition cursor-pointer"
+                  style={{
+                    background: goldGradient,
+                    color: "black",
+                  }}
+                >
+                  Save $40 by opting 1 Year
+                </button>) : null
+
+                }
           </h4>
 
           <ul className="text-white/70 mb-6 text-left space-y-2 text-sm sm:text-base">
