@@ -120,9 +120,9 @@ export default function Home() {
         {/* ========================= */}
         <nav className="w-full z-50 backdrop-none">
           <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
-            <Link href="/">
+            <a href="/"  className="cursor-pointer">
             <Image src="/images/logo2.png" alt="Logo" width={100} height={40} />
-            </Link>
+            </a>
 
             <div className="hidden md:flex gap-10 text-sm tracking-widest uppercase">
               <a href="#features" onClick={e => handleAnchor(e, "#features")} className="cursor-pointer text-gray-400 hover:text-gray-200 transition text-sm">Features</a>
@@ -565,7 +565,7 @@ Explore structured strategies and educational resources to strengthen your tradi
       <div className="bg-black rounded-2xl p-10 h-full flex flex-col justify-between">
 
         <div>
-          <h3 className="text-xl font-semibold mb-4">Premium Discord</h3>
+          <h3 className="text-xl font-semibold mb-4">Get Discord Premium</h3>
           <p className="text-white/60 text-sm mb-8">
             Unlock full analyst access, daily set-ups, portfolio tools, and in-depth market analysis.
           </p>
