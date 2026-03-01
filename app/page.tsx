@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
 const goldGradient =
-  "linear-gradient(180deg, #f8f3aa 0%, #ffe993 35%, #d4af37 65%, #b8860b 100%)";
+  "linear-gradient(180deg, #ffde59 0%, #ff914d 100%)";
 
 // Hook: returns a ref that adds the "visible" class when element enters viewport
 function useReveal() {
@@ -30,9 +30,9 @@ function useReveal() {
 
 export default function Home() {
   const [open, setOpen] = useState<number | null>(0);
-  const [billing, setBilling] = useState<"monthly" | "6monthly" | "yearly">("monthly");
+  const [billing, setBilling] = useState<"weekly" | "monthly" | "6monthly" | "yearly">("weekly");
 
-  const price = billing === "monthly" ? "$39.99" : billing === "6monthly" ? "$219.95" : "$399.99";
+  const price = billing === "weekly" ? "$19.99" : billing === "monthly" ? "$39.99" : billing === "6monthly" ? "$219.95" : "$399.99";
 
   // Reveal refs
   const heroRef = useReveal();
@@ -316,7 +316,7 @@ Explore structured strategies and educational resources to strengthen your tradi
                 How It Works
               </h2>
               <p className="text-white/60 mb-20 text-lg">
-                Start trading in minutes
+               Build clarity, structure and confidence in your trading. From market context to execution, step by step. Learn the process behind consistent trading.
               </p>
             </div>
 
@@ -519,6 +519,19 @@ Explore structured strategies and educational resources to strengthen your tradi
             <div className="max-w-xl mx-auto border border-white/10 rounded-3xl p-10 bg-white/5 backdrop-blur">
 
               <div className="flex justify-center mb-10  rounded-full p-1">
+              
+                <button
+                  onClick={() => setBilling("weekly")}
+                  className="px-6 py-2 rounded-full  cursor-pointer transition"
+                  style={
+                    billing === "weekly"
+                      ? { background: goldGradient, color: "black" }
+                      : { color: "rgba(255,255,255,0.6)" }
+                  }
+                >
+                  1 Week
+                </button>
+
                 <button
                   onClick={() => setBilling("monthly")}
                   className="px-6 py-2 rounded-full  cursor-pointer transition"
@@ -559,7 +572,7 @@ Explore structured strategies and educational resources to strengthen your tradi
                 {price}
                 <span className="text-lg text-white/60">
                   {" "}
-                  / {billing === "monthly" ? "month" : billing === "6monthly" ? "6 months" : "year"}
+                  / {billing === "weekly" ? "week" : billing === "monthly" ? "month" : billing === "6monthly" ? "6 months" : "year"}
                 </span>
               </h3>
 
@@ -570,7 +583,7 @@ Explore structured strategies and educational resources to strengthen your tradi
                 <li>✔ Risk Strategy Framework</li>
               </ul>
               {/* new tab */}
-                <Link target="__blank" href={billing === "yearly" ? "https://subscord.com/store/1474291338802626570/checkout/8f9B5nK--MTMxMg" : billing === "6monthly" ? "https://subscord.com/store/1474291338802626570/checkout/CObwDgo_-MTMxMQ" : "https://subscord.com/store/1474291338802626570/checkout/Z7teUQOl-MTI5Mg"} className="w-full">
+                <Link target="__blank" href={billing==="weekly"? "https://subscord.com/store/1474291338802626570/checkout/_I07_IeE-MTMxMw": billing === "yearly" ? "https://subscord.com/store/1474291338802626570/checkout/8f9B5nK--MTMxMg" : billing === "6monthly" ? "https://subscord.com/store/1474291338802626570/checkout/CObwDgo_-MTMxMQ" : "https://subscord.com/store/1474291338802626570/checkout/Z7teUQOl-MTI5Mg"} className="w-full">
               <button
                 className="w-full py-4 rounded-full font-semibold text-black transition cursor-pointer"
 

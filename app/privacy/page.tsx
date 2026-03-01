@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const goldGradient =
-  "linear-gradient(180deg, #fff3b0 0%, #ffe993 35%, #d4af37 65%, #b8860b 100%)";
+ "linear-gradient(180deg, #ffde59 0%, #ff914d 100%)";
 
 export default function PrivacyPage() {
   return (
