@@ -146,18 +146,7 @@ export default function Home() {
         {/* ========================= */}
         <section className="py-48 flex flex-col items-center text-center px-6 pt-32">
           <div ref={heroRef} className="reveal reveal-stagger">
-            <div
-              className="inline-block border hover:bg-amber-200/10 cursor-pointer px-8 py-2 rounded-full text-sm mb-8"
-              style={{
-                borderWidth: "1px",
-                borderStyle: "solid",
-                borderRadius: "9999px",
-                borderColor: "#d4af37",
-                color: "#d4af37",
-              }}
-            >
-              First Week FREE
-            </div>
+          
 
             <h1 className="text-5xl md:text-7xl font-bold leading-tight max-w-5xl">
               Master Your{" "}
