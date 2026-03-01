@@ -145,7 +145,7 @@ export default function Home() {
         {/* ========================= */}
         {/* HERO */}
         {/* ========================= */}
-        <section className="pt-48 pb-24 flex flex-col items-center text-center px-6 pt-32">
+        <section className="pt-48 pb-12 flex flex-col items-center text-center px-6 pt-32">
           <div ref={heroRef} className="reveal reveal-stagger">
           
 
@@ -194,7 +194,7 @@ export default function Home() {
             {/* ========================= */}
 {/* TRADE ON */}
 {/* ========================= */}
-<section className="py-12 mt-12 px-6 text-center relative">
+<section className="py-6 mt-12 px-6 text-center relative">
   <div className="max-w-6xl mx-auto">
 
     <p className="text-white/40 tracking-[0.3em] text-xs mb-4 uppercase">
@@ -268,7 +268,7 @@ export default function Home() {
         {/* ========================= */}
         {/* FEATURES */}
         {/* ========================= */}
-        <section id="features" className="py-32 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+        <section id="features" className="py-16 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
           <div ref={featuresRef} className="reveal">
             <h2 className="text-4xl font-bold mb-6">
               Operate With An{" "}
@@ -389,7 +389,7 @@ Explore structured strategies and educational resources to strengthen your tradi
    {/* ========================= */}
 {/* TEAM SECTION */}
 {/* ========================= */}
-<section id="team" className="relative py-40 px-6 overflow-hidden">
+<section id="team" className="relative py-16 px-6 overflow-hidden">
 
   {/* Background */}
   <div
@@ -509,7 +509,7 @@ Explore structured strategies and educational resources to strengthen your tradi
 {/* ========================= */}
 {/* PRICING */}
 {/* ========================= */}
-<section id="pricing" className="relative py-32 px-6 overflow-hidden">
+<section id="pricing" className="relative py-16 px-6 overflow-hidden">
 
   {/* Background Image */}
   <div
@@ -651,7 +651,7 @@ Explore structured strategies and educational resources to strengthen your tradi
         {/* ========================= */}
         {/* FAQ */}
         {/* ========================= */}
-        <section id="faq" className="py-32 px-6 max-w-4xl mx-auto">
+        <section id="faq" className="py-16 px-6 max-w-4xl mx-auto">
           <div ref={faqRef} className="reveal">
             <h2 className="text-4xl font-bold text-center mb-4">
               FAQ
@@ -706,7 +706,7 @@ Explore structured strategies and educational resources to strengthen your tradi
         {/* ========================= */}
 {/* FOOTER */}
 {/* ========================= */}
-<footer className="bg-black border-t border-[#ffe993]/30 mt-32">
+<footer className="bg-black border-t border-[#ffe993]/30 mt-16">
 
   <div className="max-w-7xl mx-auto px-6 py-16">
 
