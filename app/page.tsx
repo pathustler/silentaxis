@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
 const goldGradient =
@@ -119,7 +120,9 @@ export default function Home() {
         {/* ========================= */}
         <nav className="w-full z-50 backdrop-none">
           <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
+            <Link href="/">
             <Image src="/images/logo2.png" alt="Logo" width={100} height={40} />
+            </Link>
 
             <div className="hidden md:flex gap-10 text-sm tracking-widest uppercase">
               <a href="#features" onClick={e => handleAnchor(e, "#features")} className="cursor-pointer text-gray-400 hover:text-gray-200 transition text-sm">Features</a>
@@ -290,17 +293,19 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-white/70 text-lg">
-              Structured execution. No hype. Just results.
+              Get daily updates on global trends and market structure for crypto, stocks, metals, and indices.
+Explore structured strategies and educational resources to strengthen your trading decisions.
             </p>
           </div>
 
           <div className="space-y-6 reveal reveal-stagger" ref={useReveal()}>
             {[
-              "Real-Time Signals",
-              "Daily Strategic Analysis",
-              "Risk Framework Guidance",
-              "Private Community",
-              "Verified Performance"
+              "Macro context & market structure",
+              "Trading & investing frameworks",
+              "Portfolio management tools",
+              "Education & regular analysis",
+              "Daily trading Set-Ups",
+              "Private Premium Community"
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-4">
                 <div className="w-4 h-4 rounded-full" style={{ background: goldGradient }} />
@@ -360,10 +365,10 @@ export default function Home() {
                   2
                 </div>
                 <h3 className="text-xl font-semibold">
-                  Receive Calls
+                  Study and Compare 
                 </h3>
                 <p className="text-white/50 leading-relaxed">
-                  Get real-time trade alerts with entries, targets, and stop losses
+                  Study and compare market structure breakdowns, and trading frameworks
                 </p>
               </div>
 
@@ -390,6 +395,127 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+   {/* ========================= */}
+{/* TEAM SECTION */}
+{/* ========================= */}
+<section id="team" className="relative py-40 px-6 overflow-hidden">
+
+  {/* Background */}
+  <div
+    className="absolute inset-0 -z-10 bg-cover bg-center"
+    style={{
+      backgroundImage: "url('/images/mountain-bg.jpg')",
+    }}
+  />
+  <div className="absolute inset-0 -z-10 bg-black/85" />
+
+  {/* Header */}
+  <div className="text-center max-w-4xl mx-auto mb-20">
+    <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-wide text-white">
+      MEET THE TEAM
+    </h2>
+
+    <p className="text-white/70 text-lg leading-relaxed">
+      We unite traders and analysts to deliver clear market context,
+      actionable frameworks and education. Meet the experts shaping
+      our research and daily analysis. Our team brings clarity and
+      structure to every market.
+    </p>
+  </div>
+
+  {/* Cards */}
+  <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 cursor-pointer">
+
+    {[
+      {
+        img: "/images/team/dry.png",
+        name: "Dry Martini",
+        title: "Founder & Analyst",
+        handle: "@drymartini777",
+        x:"https://x.com/drymartini777",
+        bio: "Italian swing trader with 4+ years of real market experience. He focuses on mindset, risk management and scenario-based trading. Backed by real-life businesses, he trades with patience, flexibility and a macro-driven approach.",
+      },
+      {
+        img: "/images/team/joe.png",
+        name: "Mr. Joe",
+        title: "Founder & Analyst",
+        handle: "@MrJoe880",
+        x:"https://x.com/MrJoe880",
+        bio: "A trader forged by discipline and experience, with a background in competitive sports. Focused on process over ego, he trades indices, gold and BTC through scalping, swing and spot strategies. His edge comes from rigor, risk control and learning from mistakes, not shortcuts.",
+      },
+      {
+        img: "/images/team/kazy.png",
+        name: "Kazy",
+        title: "Analyst and Community Manager",
+        handle: "@kazymun",
+        x:"https://x.com/kazymun",
+        bio: "A disciplined trader with 2.5 years of active experience and a longer background in crypto. Trades majors only — BTC, ETH, and SOL — with a focus on liquidity, structure, and clean execution. Uses liquidation heatmaps to identify dense liquidity zones and potential reversals, emphasizing risk management and consistency.",
+      },
+    ].map((member, i) => (
+      <div
+        key={i}
+        className="group bg-black/70  backdrop-blur-sm rounded-2xl p-10 border-2 transition-all duration-500 hover:-translate-y-2"
+        style={{
+          borderColor: "#ffe99340",
+        }}
+      >
+
+        {/* Gold Border Glow on Hover */}
+        <div className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition duration-500"
+          style={{
+            boxShadow: "0 0 40px rgba(255,233,147,0.25)",
+          }}
+        />
+
+        {/* Avatar */}
+        <div className="flex justify-center mb-8">
+          <div
+            className="w-44 h-44 rounded-full p-[3px]"
+            style={{ background: goldGradient }}
+          >
+            <div className="w-full h-full rounded-full overflow-hidden bg-black">
+
+              <Image
+                src={member.img}
+                alt={member.name}
+                width={176}
+                height={176}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Name + X */}
+        <div className="flex items-center gap-3 justify-start mb-2">
+          <h3 className="text-xl font-semibold text-white">
+            {member.name}
+          </h3>
+          <Link href={member.x} target="_blank" >
+          <Image
+            src="/images/refer/x.png"
+            alt="X"
+            width={20}
+            height={20}
+            className="opacity-70 hover:opacity-100 transition"
+          />
+          </Link>
+        </div>
+        <p className="text-md text-amber-300/80 font-semibold mb-4 ">
+          {member.title}
+        </p>
+
+        {/* Bio */}
+        <p className="text-white/70 text-sm leading-relaxed">
+          {member.bio}
+        </p>
+
+      </div>
+    ))}
+  </div>
+</section>
+
 
         {/* ========================= */}
         {/* PRICING */}
@@ -453,13 +579,16 @@ export default function Home() {
                 <li>✔ Daily Market Breakdown</li>
                 <li>✔ Risk Strategy Framework</li>
               </ul>
-
+              {/* new tab */}
+                <Link target="__blank" href={billing === "yearly" ? "https://subscord.com/store/1474291338802626570/checkout/8f9B5nK--MTMxMg" : billing === "6monthly" ? "https://subscord.com/store/1474291338802626570/checkout/CObwDgo_-MTMxMQ" : "https://subscord.com/store/1474291338802626570/checkout/Z7teUQOl-MTI5Mg"} className="w-full">
               <button
                 className="w-full py-4 rounded-full font-semibold text-black transition cursor-pointer"
+
                 style={{ background: goldGradient }}
               >
                 Get Started
               </button>
+              </Link>
             </div>
           </div>
         </section>
@@ -478,17 +607,29 @@ export default function Home() {
 
             {[
               {
-                q: "How does it work?",
-                a: "You receive structured execution guidance in real-time.",
+                q: "Who can join Telegram or Discord?",
+                a: "Anyone interested in market structure, macro context, or trading frameworks can join our free Telegram. Premium Discord is for those seeking advanced tools and direct analyst access.",
               },
               {
+                q: "What do I get with free Telegram?",
+                a: "Receive daily macro updates, weekly educational content, and invites to weekly live sessions on Discord—all free.",
+              },
+              {
+                q: "How do I join Premium Discord?",
+                a: "Choose a payment plan and follow the steps to subscribe. You’ll receive an invite link for instant access to premium features.",
+              },
+               {
+                q: "What are the payment options?",
+                a: "Crypto only. Select from monthly, six-month, or annual plans. All options include full access to our Discord and exclusive resources.",
+              },
+               {
                 q: "Can I cancel anytime?",
-                a: "Yes. Full flexibility.",
+                a: "Yes, there are no long-term commitments. You can cancel your subscription at any time.",
               },
-              {
-                q: "Is it beginner friendly?",
-                a: "Structured. But discipline required.",
-              },
+               {
+                q: "Can I get support if needed?",
+                a: "Yes. For questions about joining, payments, or using our platforms, contact our support team for help opening a ticket on our Discord.",
+              }
             ].map((item, i) => (
               <div
                 key={i}
@@ -507,9 +648,87 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="border-t border-white/10 py-16 text-center text-white/40 text-sm">
-          © {new Date().getFullYear()} Silent Axis
-        </footer>
+        {/* ========================= */}
+{/* FOOTER */}
+{/* ========================= */}
+<footer className="bg-black border-t border-[#ffe993]/30 mt-32">
+
+  <div className="max-w-7xl mx-auto px-6 py-16">
+
+    <div className="grid md:grid-cols-3 gap-12">
+
+      {/* Left */}
+      <div>
+        <h3
+          className="text-3xl font-bold tracking-widest mb-2 grayscale opacity-40"
+          style={{
+            background:
+              "linear-gradient(180deg, #fff3b0 0%, #ffe993 35%, #d4af37 65%, #b8860b 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          SILENT AXIS
+        </h3>
+
+        <p className="text-white text-xs tracking-wider mb-6  opacity-30">
+          — CLARITY. DISCIPLINE. CAPITAL —
+        </p>
+
+        <p className="text-white/70 mb-6">
+          The All-in-One Premium Crypto Community.
+        </p>
+
+        {/* Social Icons */}
+        <div className=" text-white/70 flex items-center gap-3">
+          <a
+            href="https://x.com/silentaxis0"
+
+            target="_blank"
+            className="hover:text-white transition"
+          >
+            <Image src="/images/refer/x.png" alt="X" width={40} height={40} />
+          </a>
+
+          <a
+            href="https://t.me/silentaxis0"
+            target="__blank"
+            className="hover:text-white transition"
+          >
+            <Image src="/images/refer/telegram.png" alt="Telegram" width={30} height={30} />
+          </a>
+        </div>
+      </div>
+
+      {/* Company */}
+      <div>
+        <h4 className="text-white font-semibold mb-6">Company</h4>
+        <ul className="space-y-3 text-white/60">
+          <li><a href="#features" className="hover:text-white transition">About</a></li>
+          <li><a href="#team" className="hover:text-white transition">Team</a></li>
+          <li><a href="#pricing" className="hover:text-white transition">Pricing</a></li>
+        </ul>
+      </div>
+
+      {/* Info */}
+      <div>
+        <h4 className="text-white font-semibold mb-6">Info</h4>
+        <ul className="space-y-3 text-white/60">
+          <li><a href="/terms" className="hover:text-white transition">Terms & Service</a></li>
+          <li><a href="/privacy" className="hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="/refund" className="hover:text-white transition">Refund Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    {/* Bottom Bar */}
+    <div className="border-t border-white/10 mt-8 pt-8 text-white/50 text-sm">
+      Silent Axis. All right reserved. © 2026
+    </div>
+
+  </div>
+</footer>
       </main>
     </>
   );
