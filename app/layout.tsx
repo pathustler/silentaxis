@@ -18,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${grotesk.variable}`}>
+      <head>
+        <title>Silent Axis</title>
+      </head>
       <body>{children}</body>
     </html>
   );
