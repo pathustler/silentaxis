@@ -308,7 +308,7 @@ Explore structured strategies and educational resources to strengthen your tradi
         {/* ========================= */}
         {/* HOW IT WORKS */}
         {/* ========================= */}
-        <section className="py-32 px-6 relative text-center">
+        <section className="py-24 px-6 relative text-center">
           <div className="max-w-6xl mx-auto">
 
             <div ref={howRef} className="reveal">
