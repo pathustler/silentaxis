@@ -505,11 +505,10 @@ Explore structured strategies and educational resources to strengthen your tradi
     ))}
   </div>
 </section>
-
 {/* ========================= */}
 {/* PRICING */}
 {/* ========================= */}
-<section id="pricing" className="relative py-16 px-6 overflow-hidden">
+<section id="pricing" className="relative py-20 md:py-32 px-4 sm:px-6 overflow-hidden">
 
   {/* Background Image */}
   <div
@@ -520,27 +519,32 @@ Explore structured strategies and educational resources to strengthen your tradi
   />
   <div className="absolute inset-0 -z-10 bg-black/85" />
 
-  <div className="max-w-6xl mx-auto text-center mb-16">
-    <h2 className="text-4xl md:text-5xl font-bold tracking-widest">
+  <div className="max-w-6xl mx-auto text-center mb-12 md:mb-16">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-widest">
       JOIN SILENT AXIS
     </h2>
   </div>
 
-  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
 
     {/* FREE TELEGRAM CARD */}
     <div className="rounded-2xl p-[2px]" style={{ background: goldGradient }}>
-      <div className="bg-black rounded-2xl p-10 h-full flex flex-col justify-between">
+      <div className="bg-black rounded-2xl p-6 sm:p-8 md:p-10 h-full flex flex-col justify-between">
 
         <div>
-          <h3 className="text-xl font-semibold mb-4">Free Telegram</h3>
-          <p className="text-white/60 text-sm mb-10">
+          <h3 className="text-lg sm:text-xl font-semibold mb-4">
+            Free Telegram
+          </h3>
+
+          <p className="text-white/60 text-sm mb-8 sm:mb-10">
             Get daily macro updates, weekly education, and join live sessions on Discord at no cost.
           </p>
 
-          <h4 className="text-4xl font-bold mb-10">$0.00</h4>
+          <h4 className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-10">
+            $0.00
+          </h4>
 
-          <ul className="text-white/70 space-y-3 mb-12 text-left">
+          <ul className="text-white/70 space-y-3 mb-10 sm:mb-12 text-left text-sm sm:text-base">
             <li>• Daily macro market updates</li>
             <li>• Weekly educational content</li>
             <li>• Weekly live Discord sessions</li>
@@ -549,7 +553,7 @@ Explore structured strategies and educational resources to strengthen your tradi
 
         <Link target="__blank" href="https://t.me/silentaxis0">
           <button
-            className="w-full py-4 rounded-full cursor-pointer font-semibold text-black transition"
+            className="w-full py-3 sm:py-4 rounded-full cursor-pointer font-semibold text-black transition"
             style={{ background: goldGradient }}
           >
             Join Telegram
@@ -562,18 +566,22 @@ Explore structured strategies and educational resources to strengthen your tradi
 
     {/* PREMIUM CARD */}
     <div className="rounded-2xl p-[2px]" style={{ background: goldGradient }}>
-      <div className="bg-black rounded-2xl p-10 h-full flex flex-col justify-between">
+      <div className="bg-black rounded-2xl p-6 sm:p-8 md:p-10 h-full flex flex-col justify-between">
 
         <div>
-          <h3 className="text-xl font-semibold mb-4">Get Discord Premium</h3>
-          <p className="text-white/60 text-sm mb-8">
+          <h3 className="text-lg sm:text-xl font-semibold mb-4">
+            Get Discord Premium
+          </h3>
+
+          <p className="text-white/60 text-sm mb-6 sm:mb-8">
             Unlock full analyst access, daily set-ups, portfolio tools, and in-depth market analysis.
           </p>
 
           {/* SEGMENTED TOGGLE */}
-          <div className="flex mb-10 border rounded-full overflow-hidden w-fit mx-auto "
-               style={{ borderColor: "#ff914d" }}>
-            
+          <div
+            className="flex flex-wrap justify-center gap-0 md:gap-4 sm:flex-nowrap mb-8 border rounded-full overflow-hidden w-full sm:w-fit mx-auto"
+            style={{ borderColor: "#ff914d" }}
+          >
             {[
               { key: "weekly", label: "1 Week" },
               { key: "monthly", label: "1 Month" },
@@ -583,7 +591,7 @@ Explore structured strategies and educational resources to strengthen your tradi
               <button
                 key={plan.key}
                 onClick={() => setBilling(plan.key as any)}
-                className="px-6 py-2 transition font-medium cursor-pointer"
+                className="px-4 sm:px-2 lg:px-4 py-2 text-xs sm:text-base transition font-medium cursor-pointer rounded-full sm:rounded-none"
                 style={
                   billing === plan.key
                     ? { background: goldGradient, color: "black" }
@@ -593,13 +601,12 @@ Explore structured strategies and educational resources to strengthen your tradi
                 {plan.label}
               </button>
             ))}
-
           </div>
 
           {/* PRICE */}
-          <h4 className="text-4xl font-bold mb-4">
+          <h4 className="text-3xl sm:text-4xl font-bold mb-4 text-center sm:text-left">
             {price}
-            <span className="text-lg text-white/60 ml-2">
+            <span className="text-base sm:text-lg text-white/60 ml-2">
               /{" "}
               {billing === "weekly"
                 ? "week"
@@ -609,9 +616,21 @@ Explore structured strategies and educational resources to strengthen your tradi
                 ? "6 months"
                 : "year"}
             </span>
+
+            {billing === "monthly" &&(
+            <button
+  className="inline-flex ml-4  items-center px-3 py-1.5 rounded-full text-xs font-semibold transition cursor-pointer"
+  style={{
+    background: goldGradient,
+    color: "black",
+  }}
+>
+  Save $20 by opting 6 Months
+</button>)
+}
           </h4>
 
-          <ul className="text-white/70 mb-6 text-left">
+          <ul className="text-white/70 mb-6 text-left space-y-2 text-sm sm:text-base">
             <li>• Direct analysts access</li>
             <li>• Premium Live Sessions</li>
             <li>• Daily trade set-ups</li>
@@ -635,7 +654,7 @@ Explore structured strategies and educational resources to strengthen your tradi
           }
         >
           <button
-            className="w-full py-4 rounded-full cursor-pointer font-semibold text-black transition"
+            className="w-full py-3 sm:py-4 rounded-full cursor-pointer font-semibold text-black transition"
             style={{ background: goldGradient }}
           >
             Get Premium
@@ -647,7 +666,6 @@ Explore structured strategies and educational resources to strengthen your tradi
 
   </div>
 </section>
-
         {/* ========================= */}
         {/* FAQ */}
         {/* ========================= */}
