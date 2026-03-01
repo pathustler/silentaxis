@@ -145,7 +145,7 @@ export default function Home() {
         {/* ========================= */}
         {/* HERO */}
         {/* ========================= */}
-        <section className="py-48 flex flex-col items-center text-center px-6 pt-32">
+        <section className="pt-48 pb-24 flex flex-col items-center text-center px-6 pt-32">
           <div ref={heroRef} className="reveal reveal-stagger">
           
 
